@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAs-h8-ZWc">
+                                <rect key="frame" x="279" y="72" width="42" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dps-Ft-brW">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xN9-NB-PW4">
+                                <rect key="frame" x="239" y="224" width="123" height="30"/>
+                                <state key="normal" title="Próxima Pergunta">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="botaoProxPergunta:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6aE-yj-aln"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yxl-Fd-UwC">
+                                <rect key="frame" x="268" y="271" width="65" height="30"/>
+                                <state key="normal" title="Resposta">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="botaoResposta:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fgu-xB-Cy6"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FhK-ZF-7T6">
+                                <rect key="frame" x="162" y="316" width="276" height="248"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="1qd-AQ-YSV"/>
+                                    <constraint firstAttribute="width" secondItem="FhK-ZF-7T6" secondAttribute="height" multiplier="69:62" id="IGF-rl-ojq"/>
+                                    <constraint firstAttribute="width" constant="276" id="QxX-Rb-45n"/>
+                                    <constraint firstAttribute="height" constant="248" id="g87-Vy-vio"/>
+                                    <constraint firstAttribute="width" secondItem="FhK-ZF-7T6" secondAttribute="height" multiplier="15:8" id="jwQ-OE-Lmx"/>
+                                    <constraint firstAttribute="width" constant="240" id="khJ-JG-pVQ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1qd-AQ-YSV"/>
+                                        <exclude reference="jwQ-OE-Lmx"/>
+                                        <exclude reference="khJ-JG-pVQ"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dps-Ft-brW" firstAttribute="centerX" secondItem="mAs-h8-ZWc" secondAttribute="centerX" id="8JB-VS-cDl"/>
+                            <constraint firstAttribute="centerX" secondItem="mAs-h8-ZWc" secondAttribute="centerX" id="Aw1-pW-bmr"/>
+                            <constraint firstItem="FhK-ZF-7T6" firstAttribute="top" secondItem="yxl-Fd-UwC" secondAttribute="bottom" constant="15" id="OBL-ug-Y4B"/>
+                            <constraint firstAttribute="centerX" secondItem="xN9-NB-PW4" secondAttribute="centerX" constant="-0.5" id="R5d-r7-pVz"/>
+                            <constraint firstItem="xN9-NB-PW4" firstAttribute="top" secondItem="Dps-Ft-brW" secondAttribute="bottom" constant="76" id="URt-g7-sTe"/>
+                            <constraint firstAttribute="centerX" secondItem="FhK-ZF-7T6" secondAttribute="centerX" id="b48-wx-OuT"/>
+                            <constraint firstItem="yxl-Fd-UwC" firstAttribute="top" secondItem="xN9-NB-PW4" secondAttribute="bottom" constant="25" id="djE-xE-KbU"/>
+                            <constraint firstItem="yxl-Fd-UwC" firstAttribute="centerX" secondItem="xN9-NB-PW4" secondAttribute="centerX" id="geE-t2-qe5"/>
+                            <constraint firstItem="Dps-Ft-brW" firstAttribute="top" secondItem="mAs-h8-ZWc" secondAttribute="bottom" constant="38" id="hnF-ks-ETi"/>
+                            <constraint firstItem="mAs-h8-ZWc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="52" id="kNa-k1-kHL"/>
+                            <constraint firstItem="xN9-NB-PW4" firstAttribute="centerX" secondItem="Dps-Ft-brW" secondAttribute="centerX" id="rvx-Cq-9Z4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="botaoProxPergunta" destination="xN9-NB-PW4" id="1EV-ND-Gsl"/>
+                        <outlet property="botaoResposta" destination="yxl-Fd-UwC" id="puQ-kB-15g"/>
+                        <outlet property="imageView" destination="FhK-ZF-7T6" id="Ita-p3-1Lt"/>
+                        <outlet property="labelPergunta" destination="mAs-h8-ZWc" id="VKh-eQ-l7g"/>
+                        <outlet property="labelResposta" destination="Dps-Ft-brW" id="n9V-0r-pn9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="375" y="653"/>
+        </scene>
+    </scenes>
+</document>
